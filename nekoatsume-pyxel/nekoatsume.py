@@ -696,7 +696,6 @@ class App:
             if pyxel.btnp(pyxel.MOUSE_BUTTON_LEFT) or self._keys():
                 self.audio_unlocked = True
                 pyxel.play(3, self.snd_talk_space)  # 無音に近い短い音で unlock
-            return  # タップされるまではゲームを進めない（または進めても音だけ止める）
         
         rep = game.advance(self.state, self.clock())
         if rep["ticks"]:
